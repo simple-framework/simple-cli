@@ -16,6 +16,7 @@
 1. Create a virtualenv and install the requirements
     ```bash
     virtualenv venv
+    source ./venv/bin/activate
     pip install -r requirements.txt
     ```
 1. Install the CLI in the virtual environment
