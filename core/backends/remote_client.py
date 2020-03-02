@@ -11,9 +11,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-import sys
-import logging
 from os import system
 from paramiko import SSHClient, AutoAddPolicy, RSAKey, PasswordRequiredException
 from paramiko.auth_handler import AuthenticationException, SSHException
