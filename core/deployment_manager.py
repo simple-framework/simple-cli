@@ -37,10 +37,10 @@ class DeploymentManager:
         :return: the currently loaded deployment
         """
 
-    def load(self, name):
+    def load(self, deployment=None):
         """
         Load the deployment to /etc/simple_grid.
-        @:param: name: The name of the deployment to be loaded.
+        @:param: deployment: The name of the deployment to be loaded.
         :return:
         """
         try:
@@ -54,7 +54,6 @@ class DeploymentManager:
         Unload the development from /etc/simple_grid.
         If the deployment name is not specified, the currently loaded deployment gets unloaded
         @:param: deployment: Name of the deployment that should be unloaded
-        @:raises:
         :return:
         """
         pass
@@ -65,9 +64,30 @@ class DeploymentManager:
         """
         pass
 
-    def new(self, name):
+    def new(self, deployment):
         """
-        @:param name: The name of the new deployment to be created.
+        @:param deployment: The name of the new deployment to be created.
         :return:
         """
         pass
+
+    def get_status(self, deployment=None):
+        """
+
+        :param deployment: The name of the deployment whose status is to be checked. Default is the current deployment
+        :return:
+        """
+
+    def forward(self, deployment=None):
+        """
+        Move the deployment to the next stage
+        @:param: deployment: The name of the deployment. Default is the current deployment
+        :return:
+        """
+
+    def rollback(self, deployment=None):
+        """
+        Rollback the current stage in the execution pipeline
+        @:param: deployment: The name of the deployment. Default is the current deployment
+        :return:
+        """
